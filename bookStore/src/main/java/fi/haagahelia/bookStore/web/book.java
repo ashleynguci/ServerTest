@@ -1,7 +1,14 @@
 package fi.haagahelia.bookStore.web;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class book {
-
+@Id
+@GeneratedValue(strategy=  GenerationType.AUTO)
+private long Id;
 private String title, author;
 
 private long year, isbn;
@@ -44,11 +51,10 @@ public double getPrice() {
 public void setPrice(double price) {
 	this.price = price;
 }
-
-
-
-		
-		
+@Override
+public String toString() {
+return "ISBN = " + isbn + ", title=" + title+ ",author= " + author;
+}
 
 	}
 
