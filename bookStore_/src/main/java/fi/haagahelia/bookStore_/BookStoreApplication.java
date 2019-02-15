@@ -7,6 +7,8 @@ import org.springframework.context.annotation.Bean;
 
 import fi.haagahelia.bookStore_.domain.Book;
 import fi.haagahelia.bookStore_.domain.BookRepository;
+import fi.haagahelia.bookStore_.domain.Category;
+import fi.haagahelia.bookStore_.domain.CategoryRepository;
 
 @SpringBootApplication
 public class BookStoreApplication {
@@ -15,8 +17,13 @@ public class BookStoreApplication {
 		SpringApplication.run(BookStoreApplication.class, args);
 	}
 	@Bean 
-	public CommandLineRunner demo(BookRepository repository) {
+	public CommandLineRunner demo(BookRepository repository ,CategoryRepository crepository) {
 		return (args) -> {
+			
+		crepository.save( new Category("US/UK"));
+		crepository.save( new Category("Vpop"));
+		crepository.save( new Category("Kpop"));
+			
 		Book b1  = new Book("Con mua ngang qua","Son Tung MTP", 2015,12221, 12000);
 		Book b2  = new Book("Lac Troi","Son Tung MTP", 2016,12222, 12000);
 		Book b3  = new Book("CATENA","Toc Tien", 2018,12223, 12000);
