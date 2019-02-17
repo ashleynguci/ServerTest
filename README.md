@@ -25,5 +25,6 @@ Cap view from add page
 ![Edit_page](https://github.com/ashleynguci/ServerTest/blob/master/bookStore_/editpage.png)
 
 # Bookstore: One-to-many
+Add crud repository class for the Category entity
 Cap view from add page
 ![Edit_page](https://github.com/ashleynguci/ServerTest/blob/master/bookStore_/categorypage.png)
