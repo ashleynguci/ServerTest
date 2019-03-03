@@ -44,8 +44,12 @@ public class BookController {
 	public String edit(@PathVariable("id") Long bookId, Model model){
 	model.addAttribute("book", repository.findById(bookId));
 	
-	
 	return "editbook";
 	
 	}
+	@RequestMapping(value = "/login")
+	public String login() {
+		return "login";
+	}
+	
 }
